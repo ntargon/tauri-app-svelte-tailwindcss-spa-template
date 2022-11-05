@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     import { getClient } from "@tauri-apps/api/http";
 
     type ZipCloudResult = {

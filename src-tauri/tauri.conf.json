@@ -17,6 +17,9 @@
         "all": true,
         "request": true,
         "scope": ["https://zipcloud.ibsnet.co.jp/api/*"]
+      },
+      "globalShortcut": {
+        "all": true
       }
     },
     "bundle": {

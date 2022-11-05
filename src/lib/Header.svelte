@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import { push } from "svelte-spa-router";
 
     type Hoge = {

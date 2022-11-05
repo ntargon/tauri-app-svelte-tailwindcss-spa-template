@@ -1,8 +1,8 @@
-import Page0 from '../pages/Page0.svelte'
+import ZipcodeSearch from '../pages/ZipcodeSearch.svelte'
 import Page1 from '../pages/Page1.svelte'
 
 export const routes = {
-  '/': Page0,
-  '/page0': Page0,
+  '/': ZipcodeSearch,
+  '/zipcodesearch': ZipcodeSearch,
   '/page1': Page1,
 }

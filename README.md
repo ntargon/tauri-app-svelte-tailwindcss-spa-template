@@ -1,6 +1,10 @@
-# Tauri + Svelte + Typescript
+# Tauri + Svelte + Typescript + Tailwindcss
 
-This template should help get you started developing with Tauri, Svelte and TypeScript in Vite.
+This template should help get you started developing with Tauri, Svelte, Tailwindcss and TypeScript in Vite.
+
+## Todo
+
+- `tauri.conf.json`の`productName`, `title`, `version`などを必要に応じて変更してください
 
 ## Recommended IDE Setup
 

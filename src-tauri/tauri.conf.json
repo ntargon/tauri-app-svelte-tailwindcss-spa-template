@@ -59,6 +59,9 @@
         "startDragging": false,
         "unmaximize": false,
         "unminimize": false
+      },
+      "path": {
+        "all": true
       }
     },
     "bundle": {

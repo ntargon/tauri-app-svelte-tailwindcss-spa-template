@@ -12,8 +12,8 @@
             title: 'Zipcode Search',
         },
         {
-            location: '/page1',
-            title: 'Page1',
+            location: '/path_api_page',
+            title: 'path | Tauri Apps',
         },
     ]
 </script>

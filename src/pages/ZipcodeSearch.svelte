@@ -1,5 +1,6 @@
 <script lang="ts">
     import { getClient } from "@tauri-apps/api/http";
+    import { message } from '@tauri-apps/api/dialog';
 
     type ZipCloudResult = {
         zipcode: string,
@@ -21,18 +22,16 @@
 
     let results: Array<ZipCloudResult> = [];
     let zipcode: string = "";
-    let message: string = "";
 
     async function searchZipcode() {
         const client = await getClient();
         const response = await client.get('https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + zipcode);
         const data = response.data as ZipCloudData;
 
-        if (data.status === 200) {
-            message = "";
-            results = data.results ? data.results : [];
+        if (data.status === 200 && data.results) {
+            results = data.results;
         } else {
-            message = data.message;
+            await message(data.message ? data.message : "Not Found", {title: 'Error', type: 'error'});
             results = []
         }
     };
@@ -48,10 +47,6 @@
             <input type="text" bind:value={zipcode} placeholder="zipcode">
             <button type="submit">郵便番号を検索</button>
         </form>
-
-        {#if message}
-            <p class="text-red-600">{message}</p>
-        {/if}
 
         {#each results as result}
             <div>

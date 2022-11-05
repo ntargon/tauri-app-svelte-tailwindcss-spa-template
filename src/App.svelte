@@ -1,16 +1,13 @@
 <script lang="ts">
-  import Greet from './lib/Greet.svelte'
-  import "./app.css"
-  import Router from 'svelte-spa-router'
-  import { routes } from './router'
-  import { push } from 'svelte-spa-router';
+  import Greet from './lib/Greet.svelte';
+  import Header from './lib/Header.svelte';
+  import './app.css'
+  import Router from 'svelte-spa-router';
+  import { routes } from './router';
 </script>
 
 <main class="mx-5">
-  <div>
-    <button on:click={() => push('/')}>Zipcode Search</button>
-    <button on:click={() => push('/page1')}>Page1</button>
-  </div>
+  <Header />
 
   <div>
     <Router {routes} />

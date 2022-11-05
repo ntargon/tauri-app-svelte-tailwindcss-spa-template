@@ -42,6 +42,7 @@
 <div>
     <h1>Zipcode Search</h1>
 
+    <h2>検索する</h2>
     <div>
         <form on:submit|preventDefault={searchZipcode}>
             <input type="text" bind:value={zipcode} placeholder="zipcode">
@@ -58,4 +59,9 @@
             </div>
         {/each}
     </div>
+
+    <h2>使い方</h2>
+    <p>
+        こうやります!
+    </p>
 </div>

@@ -30,7 +30,7 @@
 
         if (data.status === 200) {
             message = "";
-            results = data.results;
+            results = data.results ? data.results : [];
         } else {
             message = data.message;
             results = []

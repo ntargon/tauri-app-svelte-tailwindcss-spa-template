@@ -1,27 +1,12 @@
 <script lang="ts">
   import { push } from "svelte-spa-router";
-
-    type Hoge = {
-        location: string,
-        title: string,
-    };
-
-    const hogeArray: Array<Hoge> = [
-        {
-            location: '/',
-            title: 'Zipcode Search',
-        },
-        {
-            location: '/path_api_page',
-            title: 'path | Tauri Apps',
-        },
-    ]
+  import { routesWithTitle } from "../router"
 </script>
 
 
 <div class="p-1">
-  {#each hogeArray as hoge}
-    <button on:click={() => push(hoge.location)}>{hoge.title}</button>
+  {#each routesWithTitle as routeWithTitle}
+    <button on:click={() => push(routeWithTitle.location)}>{routeWithTitle.title}</button>
   {/each}
 </div>
 

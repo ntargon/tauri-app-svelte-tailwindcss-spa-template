@@ -1,12 +1,15 @@
 <script lang="ts">
-  import { push } from "svelte-spa-router";
+  import { push, location } from "svelte-spa-router";
   import { routesWithTitle } from "../router"
 </script>
 
 
 <div class="p-1">
   {#each routesWithTitle as routeWithTitle}
-    <button on:click={() => push(routeWithTitle.location)}>{routeWithTitle.title}</button>
+    <button
+      on:click={() => push(routeWithTitle.location)}
+      class="{$location === routeWithTitle.location ? 'border-cyan-400' : ''}"
+    >{routeWithTitle.title}</button>
   {/each}
 </div>
 
